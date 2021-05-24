@@ -25,6 +25,15 @@
         </form>
     <?php else:?>
         <h1>Please Login Admin</h1>
+        <form action="admin_process.php" method="post">
+            <label for="uname">Username</label><br>
+            <input type="text" name="username" id="uname" required><br>
+
+            <label for="pass">Password</label><br>
+            <input type="password" name="password" id="pass" required><br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
     <?php endif;?>
     <br>
     <a href="index.php"><button>Back to role selection</button></a>

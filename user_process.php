@@ -12,19 +12,31 @@
 <body>
     <?php if($act == "login"):?>
         <h1>Please Login</h1>
-        <form action="user_process.php" method="post">
-            <input type="radio" name="act" id="login" value="login">
-            <label for="login">Login</label>
+        <form action="menu_atm.php" method="post">
+            <label for="uname">Username</label><br>
+            <input type="text" name="username" id="uname"><br>
 
-            <input type="radio" name="act" id="signUp" value="signUp">
-            <label for="signUp">Sign Up</label>
-
+            <label for="pass">Password</label><br>
+            <input type="password" name="password" id="pass"><br>
             <br>
-
             <input type="submit" value="Submit">
+
         </form>
     <?php else:?>
         <h1>Input your data</h1>
+        <form action="menu_atm.php" method="post">
+            <label for="uname">Username</label><br>
+            <input type="text" name="username" id="uname" required><br>
+
+            <label for="pass">Password</label><br>
+            <input type="password" name="password" id="pass" required><br>
+
+            <label for="deposit">First deposit</label><br>
+            <input type="number" name="password" id="pass" min="0" required>
+            <br><br>
+            <input type="submit" value="Submit">
+
+        </form>
     <?php endif;?>
 </body>
 </html>
