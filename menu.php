@@ -13,7 +13,7 @@
     <?php if($role == "User"):?>
         <h1>Hello there select what you gonna do</h1>
         <form action="user_process.php" method="post">
-            <input type="radio" name="act" id="login" value="login">
+            <input type="radio" name="act" id="login" value="login" required>
             <label for="login">Login</label>
 
             <input type="radio" name="act" id="signUp" value="signUp">

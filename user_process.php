@@ -14,10 +14,10 @@
         <h1>Please Login</h1>
         <form action="menu_atm.php" method="post">
             <label for="uname">Username</label><br>
-            <input type="text" name="username" id="uname"><br>
+            <input type="text" name="username" id="uname" required><br>
 
             <label for="pass">Password</label><br>
-            <input type="password" name="password" id="pass"><br>
+            <input type="password" name="password" id="pass" required><br>
             <br>
             <input type="submit" value="Submit">
 
