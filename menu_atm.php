@@ -13,7 +13,7 @@
 <body>
     <h1>Halo, <?php echo $username;?></h1>
     <h5>Select what you gonna do</h5>
-    <form action="user_process.php" method="post">
+    <form action="detail_menu_atm.php" method="post">
         <input type="radio" name="act1" id="deposit" value="deposit" required>
         <label for="deposit">Deposit</label>
         <br>
