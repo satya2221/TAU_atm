@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <title>Activity Menu</title>
 </head>
 <body>
@@ -24,18 +25,28 @@
             <input type="submit" value="Submit">
         </form>
     <?php else:?>
-        <h1>Please Login Admin</h1>
-        <form action="admin_process.php" method="post">
-            <label for="uname">Username</label><br>
-            <input type="text" name="username" id="uname" required><br>
-
-            <label for="pass">Password</label><br>
-            <input type="password" name="password" id="pass" required><br>
-            <br>
-            <input type="submit" value="Submit">
-        </form>
+        <center class="my-2">
+            <h1>Please Login Admin</h1>
+        </center>
+        <div class="container my-1">    
+            <form action="admin_process.php" method="post">
+                <div class="mb-3">
+                    <label for="uname" class="form-label">Username</label>
+                    <input type="text" class="form-control" name="username" id="uname" required>
+                </div>
+                <div class="mb-3">
+                    <label for="pass" class="form-label">Password</label><br>
+                    <input type="password" class="form-control" name="password" id="pass" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                </div>
+            </form>
+        </div>    
     <?php endif;?>
-    <br>
-    <a href="index.php"><button>Back to role selection</button></a>
+    <center>
+        <a href="index.php" class="btn btn-primary mt-4">Back to role selection</a>
+    </center>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 </body>
 </html>
