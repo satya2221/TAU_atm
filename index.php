@@ -12,7 +12,7 @@
         <h1>Choose your role</h1>
     </center>
     <div class="container my-1">
-        <form action="menu.php" method="post" >
+        <form action="menu.php" method="get">
             <div class="form-check d-grid col-6 mx-auto my-3 text-center">
                 <input class="btn-check" type="radio" name="role" id="user" value="User" autocomplete="off" required>
                 <label class="btn btn-outline-success" for="user">

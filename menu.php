@@ -1,5 +1,5 @@
 <?php 
-    $role = $_POST['role'];
+    $role = $_GET['role'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,20 +33,24 @@
         <center class="my-2">
             <h1>Please Login Admin</h1>
         </center>
-        <div class="container my-1">    
-            <form action="admin_process.php" method="post">
-                <div class="mb-3">
-                    <label for="uname" class="form-label">Username</label>
-                    <input type="text" class="form-control" name="username" id="uname" required>
-                </div>
-                <div class="mb-3">
-                    <label for="pass" class="form-label">Password</label><br>
-                    <input type="password" class="form-control" name="password" id="pass" required>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-danger">Submit</button>
-                </div>
-            </form>
+        <div class="container my-1">
+            <div class="card">
+                <div class="card-body"> 
+                    <form action="admin_process.php" method="post">
+                        <div class="mb-3">
+                            <label for="uname" class="form-label">Username</label>
+                            <input type="text" class="form-control" name="username" id="uname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pass" class="form-label">Password</label><br>
+                            <input type="password" class="form-control" name="password" id="pass" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                        </div>
+                    </form>
+                </div>   
+            </div>
         </div>    
     <?php endif;?>
     <center>
