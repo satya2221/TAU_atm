@@ -1,5 +1,5 @@
 <?php 
-    $act = $_POST['act'];
+    $act = $_GET['act'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,34 +11,58 @@
     <title>User Process</title>
 </head>
 <body>
-    <?php if($act == "login"):?>
-        <h1>Please Login</h1>
-        <form action="menu_atm.php" method="post">
-            <label for="uname">Username</label><br>
-            <input type="text" name="username" id="uname" required><br>
+    <div class="container my-1"> 
+        <?php if($act == "login"):?>
+            <h1>Please Login</h1>
+            <form action="menu_atm.php" method="post">
+                <div class="mb-3">
+                    <label for="uname" class="form-label">Username</label><br>
+                    <input type="text" name="username" id="uname" class="form-control" required>
+                </div>    
+                <div class="mb-3">
+                    <label for="pass" class="form-label">Password</label><br>
+                    <input type="password" name="password" id="pass" class="form-control" required><br>
+                </div>    
+                <div class="text-center">
+                    <button type="submit" class="btn btn-danger">Log In</button>
+                </div>
 
-            <label for="pass">Password</label><br>
-            <input type="password" name="password" id="pass" required><br>
-            <br>
-            <input type="submit" value="Submit">
+            </form>
 
-        </form>
-    <?php else:?>
-        <h1>Input your data</h1>
-        <form action="menu_atm.php" method="post">
-            <label for="uname">Username</label><br>
-            <input type="text" name="username" id="uname" required><br>
+            <center>
+                <p class="mt-5">Have no account?</p>
+                <a href="user_process.php?act=Sign" class="btn btn-primary">Sign Up</a>
+            </center>
+        <?php else:?>
+            <h1>Input your data</h1>
+            <form action="menu_atm.php" method="post">
+                <div class="mb-3">
+                    <label for="uname" class="form-label">Username</label><br>
+                    <input type="text" name="username" id="uname" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="pass" class="form-label">Password</label><br>
+                    <input type="password" name="password" id="pass" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="deposit" class="form-label">First deposit</label><br>
+                    <input type="number" name="password" id="pass" min="0"  class="form-control" required>
+                </div>
 
-            <label for="pass">Password</label><br>
-            <input type="password" name="password" id="pass" required><br>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-danger">Sign In</button>
+                </div>
 
-            <label for="deposit">First deposit</label><br>
-            <input type="number" name="password" id="pass" min="0" required>
-            <br><br>
-            <input type="submit" value="Submit">
+            </form>
 
-        </form>
-    <?php endif;?>
+            <center>
+                <p class="mt-5">Already have an account?</p>
+                <a href="user_process.php?act=login" class="btn btn-primary">Log in</a>
+            </center>
+        <?php endif;?>
+
+       
+    </div>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 </body>
 </html>

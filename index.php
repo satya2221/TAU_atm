@@ -18,7 +18,7 @@
                 <label class="btn btn-outline-success" for="user">
                     User
                 </label>
-                </div>
+            </div>
             <div class="form-check d-grid col-6 mx-auto my-3">
                 <input class="btn-check" type="radio" name="role" id="admin" value="Admin" autocomplete="off">
                 <label class="btn btn-outline-primary" for="admin">

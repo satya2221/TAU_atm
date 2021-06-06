@@ -12,17 +12,22 @@
 </head>
 <body>
     <?php if($role == "User"):?>
-        <h1>Hello there select what you gonna do</h1>
-        <form action="user_process.php" method="post">
-            <input type="radio" name="act" id="login" value="login" required>
-            <label for="login">Login</label>
+        <center class="my-2">
+            <h1>Hello there select what you gonna do</h1>
+        </center>
+        <form action="user_process.php" method="get">
+            <div class="form-check d-grid col-6 mx-auto my-3 text-center">
+                <input class="btn-check" type="radio" name="act" id="login" value="login" autocomplete="off" required>
+                <label class="btn btn-outline-success" for="login">Login</label>
+            </div>
 
-            <input type="radio" name="act" id="signUp" value="signUp">
-            <label for="signUp">Sign Up</label>
-
-            <br>
-
-            <input type="submit" value="Submit">
+            <div class="form-check d-grid col-6 mx-auto my-3">
+                <input class="btn-check" type="radio" name="act" id="signUp" value="signUp" autocomplete="off">
+                <label class="btn btn-outline-primary" for="signUp">Sign Up</label>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </div>
         </form>
     <?php else:?>
         <center class="my-2">
