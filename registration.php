@@ -4,12 +4,6 @@
     $password = md5($_POST['password']);
     $deposit = (int)$_POST['deposit'];
 
-    // echo $username."<br>";
-    // echo $password."<br>";
-    // echo $deposit."<br>";
-
-    // echo gettype($deposit);
-
     $query = mysqli_query($link, "INSERT INTO user VALUES ('$username','$password','$deposit')");
 ?>
 

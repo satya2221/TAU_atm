@@ -7,6 +7,7 @@
     $data = mysqli_fetch_array($query);
     $cek = mysqli_num_rows($query);
     if($cek >0){
+        session_start();
         $_SESSION['username'] = $username;
     }
     else{
