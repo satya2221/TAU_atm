@@ -17,7 +17,7 @@
             <h1>Please Login</h1>
             <div class="card">
                 <div class="card-body"> 
-                    <form action="menu_atm.php" method="post">
+                    <form action="login.php" method="post">
                         <div class="mb-3">
                             <label for="uname" class="form-label">Username</label><br>
                             <input type="text" name="username" id="uname" class="form-control" required>
@@ -33,8 +33,9 @@
                 </div>
             </div>
             <center>
-                <p class="mt-3">Have no account?</p>
+                <p class="mt-3">Have no account or want to back to role selection?</p>
                 <a href="user_process.php?act=Sign" class="btn btn-primary">Sign Up</a>
+                <a href="index.php" class="btn btn-info">Back to role selection</a>
             </center>
         <?php else:?>
             <h1>Input your data</h1>
@@ -66,8 +67,6 @@
                 <a href="user_process.php?act=login" class="btn btn-primary">Log in</a>
             </center>
         <?php endif;?>
-
-       
     </div>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 </body>

@@ -35,8 +35,9 @@
         </center>
         <div class="container my-1">
             <div class="card">
-                <div class="card-body"> 
-                    <form action="admin_process.php" method="post">
+                <div class="card-body">
+<!--                    Pass admin1 = admin123-->
+                    <form action="login_admin.php" method="post">
                         <div class="mb-3">
                             <label for="uname" class="form-label">Username</label>
                             <input type="text" class="form-control" name="username" id="uname" required>
